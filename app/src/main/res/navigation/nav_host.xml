@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/RV_Fragment">
+
+    <fragment
+        android:id="@+id/RV_Fragment"
+        android:name="com.udacity.shoestore.RV_Fragment"
+        android:label="fragment_r_v_"
+        tools:layout="@layout/fragment_r_v_" >
+        <action
+            android:id="@+id/action_RV_Fragment_to_info_Fragment"
+            app:destination="@id/info_Fragment"
+            app:enterAnim="@android:anim/bounce_interpolator" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_Fragment"
+        android:name="com.udacity.shoestore.Info_Fragment"
+        android:label="fragment_info_"
+        tools:layout="@layout/fragment_info_" />
+</navigation>

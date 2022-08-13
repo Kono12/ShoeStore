@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@color/white">
+
+
+
+    <TextView
+        android:id="@+id/loginTXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="LogIn"
+        android:textColor="@color/Orange"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/EmailET"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/Custom_Purple"
+        app:layout_constraintTop_toBottomOf="@id/loginTXT" />
+
+    <EditText
+        android:id="@+id/EmailET"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/Custom_Purple"
+        android:hint=" Enter Email"
+        android:textColor="@color/Orange"
+        android:textColorHint="#86FF8F00"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/loginTXT" />
+
+    <EditText
+        android:id="@+id/PassET"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/Custom_Purple"
+        android:hint=" Enter Password"
+        android:inputType="textPassword"
+        android:textColor="@color/Orange"
+        android:textColorHint="#73FF8F00"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/EmailET" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/Custom_Purple"
+        app:layout_constraintBottom_toTopOf="@id/login_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/login_btn"
+        android:fontFamily="@font/vast_shadow"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text=" Login "
+        android:textColor="@color/Orange"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signUp_btn"
+        app:layout_constraintTop_toBottomOf="@id/PassET" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_btn"
+        android:fontFamily="@font/vast_shadow"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="sign up"
+        android:textColor="@color/Orange"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/login_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/login_btn"
+        app:layout_constraintBottom_toBottomOf="@id/login_btn"
+        android:onClick="signUp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/alex_brush"
+        android:gravity="center"
+        android:text="Shoe Shop"
+        android:textColor="@color/lightOrange"
+        android:textSize="58sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/login_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
