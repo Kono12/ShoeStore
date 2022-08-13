@@ -1,5 +1,6 @@
 package com.udacity.shoestore
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,37 +11,43 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.udacity.shoestore.R.color
+import com.udacity.shoestore.databinding.FragmentRVBinding
 import com.udacity.shoestore.models.AppF_ActivityViewModel
 
 class RV_Fragment : Fragment() {
 
     lateinit  var appF_ActivityViewModel:AppF_ActivityViewModel
     lateinit var linear:LinearLayout
-
-
+    private lateinit var binding: FragmentRVBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        appF_ActivityViewModel= ViewModelProviders.of(this).get(AppF_ActivityViewModel::class.java)
+        binding =  FragmentRVBinding.inflate(layoutInflater)
 
-        return inflater.inflate(R.layout.fragment_r_v_, container, false)
+
+
+        appF_ActivityViewModel= ViewModelProviders.of(this).get(AppF_ActivityViewModel::class.java)
+       return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        linear=view.findViewById(R.id.LinearLayout)
-    //    Log.i("Hello","Shoe was called")
 
-        var btn :Button =view.findViewById(R.id.hbd)
+
+
+        linear=binding.LinearLayout
+
+        var btn :Button =binding.hbd
+
         btn.setOnClickListener {
+            //todo:add to shoe list
         }
     }
 
 
-    fun CreatTextView(name:String){
+     fun CreatTextView(name:String){
         val valueTV = TextView(context)
         valueTV.text = "Name"
         valueTV.id = 5
