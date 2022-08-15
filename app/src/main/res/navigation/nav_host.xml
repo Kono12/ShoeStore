@@ -14,10 +14,38 @@
             android:id="@+id/action_RV_Fragment_to_info_Fragment"
             app:destination="@id/info_Fragment"
             app:enterAnim="@android:anim/bounce_interpolator" />
+        <action
+            android:id="@+id/action_RV_Fragment_to_add_Shoe"
+            app:destination="@id/add_Shoe" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+        <argument
+            android:name="company"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/info_Fragment"
         android:name="com.udacity.shoestore.Info_Fragment"
         android:label="fragment_info_"
         tools:layout="@layout/fragment_info_" />
+    <fragment
+        android:id="@+id/add_Shoe"
+        android:name="com.udacity.shoestore.Add_Shoe"
+        android:label="fragment_add__shoe"
+        tools:layout="@layout/fragment_add__shoe" >
+        <action
+            android:id="@+id/action_add_Shoe_to_RV_Fragment"
+            app:destination="@id/RV_Fragment" >
+            <argument
+                android:name="iHaveShoe"
+                android:defaultValue="false" />
+        </action>
+    </fragment>
 </navigation>

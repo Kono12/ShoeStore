@@ -1,6 +1,5 @@
 package com.udacity.shoestore.models
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.Data.Shoe
@@ -9,24 +8,21 @@ import com.udacity.shoestore.Data.Shoe
 //mistake in naming (this one is fore the shoe List not the hole App)
 open class AppF_ActivityViewModel : ViewModel() {
 
-    private val _list = MutableLiveData<ArrayList<Shoe>>()
-    val shoeList: LiveData<ArrayList<Shoe>>
-        get() = _list
+     var _list = MutableLiveData<ArrayList<Shoe>>()
 
-    var ShoeNAme = ""
-    var ShoeSize = 0.0
-    var Company = ""
-    var Description = ""
-
-    init {
-
-    }
+init {
+   _list.value = ArrayList()
+    _list.value!!.add(Shoe("Black Shoe",41.0f,"adidas","Nice Shoe "))
+    _list.value!!.add(Shoe("White Shoe",51.0f,"adidas","Nice Shoe "))
+    _list.value!!.add(Shoe("Red Shoe",451.0f,"adidas","Nice Shoe "))
+}
 
 
 
-    private fun addShoe(name: String, size: Int , company : String, description:String) {
+    fun addShoe(name: String, size: Float , company : String, description:String) {
         _list.value!!.add(Shoe(name, size, company, description))
     }
+
 
 
 }

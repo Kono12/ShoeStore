@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Add_Shoe">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Shoe name "
+        android:textColor="@color/Custom_Purple"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="25dp"
+        android:hint="Enter Shoe name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:background="#CCC7C7"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text=""
+        android:textColor="@color/Orange"
+        android:textColorHint="#94FF8F00"
+        android:textSize="24sp"/>
+
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Shoe Size "
+        android:textColor="@color/Custom_Purple"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameET" />
+
+    <EditText
+        android:id="@+id/sizeET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="25dp"
+        android:background="#CCC7C7"
+        android:gravity="center"
+        android:hint="Enter Shoe size"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text=""
+        android:textColor="@color/Orange"
+        android:textColorHint="#A5FF8F00"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+    <TextView
+        android:id="@+id/Company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Shoe Company"
+        android:textColor="@color/Custom_Purple"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sizeET" />
+
+    <EditText
+        android:id="@+id/CompanyET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="25dp"
+        android:background="#CCC7C7"
+        android:gravity="center"
+        android:hint="Enter Shoe Company "
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text=""
+        android:textColor="@color/Orange"
+        android:textColorHint="#94FF8F00"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/Company"
+
+        />
+
+    <TextView
+        android:id="@+id/descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Shoe Description"
+        android:textColor="@color/Custom_Purple"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CompanyET" />
+
+    <EditText
+        android:id="@+id/descrET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="25dp"
+        android:background="#CCC7C7"
+        android:gravity="center"
+        android:hint="Enter Shoe description"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text=""
+        android:textColor="@color/Orange"
+        android:textColorHint="#94FF8F00"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/descr"
+
+        />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/saveBTN"
+    android:textColor="@color/white"
+    android:textSize="22sp"
+    android:text="save"
+    android:background="@color/Orange"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/descrET"
+    android:layout_marginTop="25dp"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

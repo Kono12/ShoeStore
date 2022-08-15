@@ -22,8 +22,3 @@ This project will consist of five screens. You don't have to create a shoe store
       * Description
     * A Cancel button with an action to navigate back to the shoe list screen
     * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
-
-12. In the Shoe List screen:
-
-    * Observe the shoes variable from the ViewModel
-    * Add a new layout item into the scrollview for each shoe.
