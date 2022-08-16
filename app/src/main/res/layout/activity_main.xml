@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -45,6 +46,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Txt1" />
 
+
+<!--    2 views with diffrent size to give feeling of shadow-->
+<!--    with a view in the middle to attach the bottom of the paper to it -->
     <View
         android:layout_width="55dp"
         android:layout_height="55dp"
