@@ -2,7 +2,7 @@
 
 <!--    Mohamed Emad <i got this theme from an old application on my own library (didnot cheat)>  -->
 
-    <style name="Theme.MohamedEmad" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+    <style name="Theme.MohamedEmad" parent="Theme.MaterialComponents.DayNight.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/Custom_Purple</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

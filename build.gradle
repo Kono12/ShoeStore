@@ -19,8 +19,8 @@ buildscript {
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
         classpath 'com.android.tools.build:gradle:7.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
 
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 

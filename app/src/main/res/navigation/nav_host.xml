@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/RV_Fragment"
         android:name="com.udacity.shoestore.RV_Fragment"
-        android:label="fragment_r_v_"
+        android:label="Shoe List"
         tools:layout="@layout/fragment_r_v_" >
         <action
             android:id="@+id/action_RV_Fragment_to_info_Fragment"
@@ -17,18 +17,6 @@
         <action
             android:id="@+id/action_RV_Fragment_to_add_Shoe"
             app:destination="@id/add_Shoe" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="size"
-            app:argType="string" />
-        <argument
-            android:name="company"
-            app:argType="string" />
-        <argument
-            android:name="description"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/info_Fragment"
@@ -38,7 +26,7 @@
     <fragment
         android:id="@+id/add_Shoe"
         android:name="com.udacity.shoestore.Add_Shoe"
-        android:label="fragment_add__shoe"
+        android:label="Add Shoe"
         tools:layout="@layout/fragment_add__shoe" >
         <action
             android:id="@+id/action_add_Shoe_to_RV_Fragment"

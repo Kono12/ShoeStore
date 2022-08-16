@@ -8,7 +8,7 @@ import com.udacity.shoestore.Data.Shoe
 //mistake in naming (this one is fore the shoe List not the hole App)
 open class AppF_ActivityViewModel : ViewModel() {
 
-     var _list = MutableLiveData<ArrayList<Shoe>>()
+      var _list = MutableLiveData<ArrayList<Shoe>>()
 
 init {
    _list.value = ArrayList()
@@ -19,8 +19,9 @@ init {
 
 
 
-    fun addShoe(name: String, size: Float , company : String, description:String) {
-        _list.value!!.add(Shoe(name, size, company, description))
+    fun addShoe(name: String, size: String, company: String, description:String) {
+        val sizee = size.toFloat()+0.0f
+        _list.value!!.add(Shoe(name, sizee, company, description))
     }
 
 

@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 
 open class Login : AppCompatActivity() {
         lateinit var shared: SharedPreferences
@@ -18,11 +17,13 @@ open class Login : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_login)
-
+            shared = getSharedPreferences("LOGINNN", Context.MODE_PRIVATE)
+            var logOut:Boolean= intent.getBooleanExtra("Logout",false)
+            if (logOut ){LogOut()}
             shared = getSharedPreferences("LOGINNN", Context.MODE_PRIVATE)
 
-
             val Login = shared.getBoolean("state", false)
+
             //TODO:Login to shared preferences
             if (Login) {
                 val intent = Intent(this.applicationContext, AppFragmentsActivity::class.java)
@@ -44,20 +45,23 @@ open class Login : AppCompatActivity() {
                     val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish()
-
-
-
                 }
             }
         }
 
      fun  Loged() {
-        shared = getSharedPreferences("LOGINNN", Context.MODE_PRIVATE)
+
+       shared = getSharedPreferences("LOGINNN", Context.MODE_PRIVATE)
         val edit = shared.edit()
         edit.putBoolean("state", true)
         edit.apply()
     }
 
+    fun LogOut(){
+        val edit = shared.edit()
+        edit.putBoolean("state", false)
+        edit.apply()
+    }
     fun signUp(view: View) {
             Toast.makeText(this,"Account was created", Toast.LENGTH_SHORT)
             val intent = Intent(this, MainActivity::class.java)

@@ -12,10 +12,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_width="267dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="+"
+        android:layout_marginTop="20dp"
+        android:background="@color/Orange"
         android:textSize="32sp"
         />
 
@@ -32,6 +34,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
             android:gravity="center"
+
     >
 
 
