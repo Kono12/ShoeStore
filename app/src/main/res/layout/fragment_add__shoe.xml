@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--constraint layout is more flexable than linear-->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.AppF_ActivityViewModel" />
+
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Add_Shoe">
+         >
 
     <TextView
         android:id="@+id/name"
@@ -34,7 +45,7 @@
         android:gravity="center"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text=""
+        android:text="@={viewModel.nameET}"
         android:textColor="@color/Orange"
         android:textColorHint="#94FF8F00"
         android:textSize="24sp"/>
@@ -64,7 +75,7 @@
         android:hint="Enter Shoe size"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text=""
+        android:text="@={viewModel.sizeET}"
         android:textColor="@color/Orange"
         android:textColorHint="#A5FF8F00"
         android:textSize="24sp"
@@ -94,7 +105,7 @@
         android:hint="Enter Shoe Company "
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text=""
+        android:text="@={viewModel.companyET}"
         android:textColor="@color/Orange"
         android:textColorHint="#94FF8F00"
         android:textSize="24sp"
@@ -126,7 +137,7 @@
         android:hint="Enter Shoe description"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text=""
+        android:text="@={viewModel.descriptionET}"
         android:textColor="@color/Orange"
         android:textColorHint="#94FF8F00"
         android:textSize="24sp"
@@ -165,3 +176,4 @@
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

@@ -28,7 +28,7 @@ class RV_Fragment : Fragment() {
     val appF_ActivityViewModel: AppF_ActivityViewModel by activityViewModels()
     lateinit var linear: LinearLayout
     private lateinit var binding: FragmentRVBinding
-    private lateinit var appBarConfiguration: AppBarConfiguration
+    //private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

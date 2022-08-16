@@ -8,7 +8,6 @@ This project will consist of five screens. You don't have to create a shoe store
 4. Shoe Listing screen
 5. Shoe Detail screen for adding a new shoe
 
-##Steps
+#Steps
 
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
 

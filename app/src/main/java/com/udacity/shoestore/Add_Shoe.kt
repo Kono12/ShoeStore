@@ -10,15 +10,21 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.udacity.shoestore.databinding.FragmentAddShoeBinding
 import com.udacity.shoestore.models.AppF_ActivityViewModel
 import java.lang.Exception
 
 class Add_Shoe : Fragment() {
+
+    lateinit var binding: FragmentAddShoeBinding
+    val viewModel: AppF_ActivityViewModel by activityViewModels()
+
 
     lateinit var cancel: Button
     lateinit var button: Button
@@ -32,7 +38,6 @@ class Add_Shoe : Fragment() {
     var company = ""
     var descriptionn = ""
 
-    val viewModel: AppF_ActivityViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -40,19 +45,23 @@ class Add_Shoe : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_add__shoe, container, false)
+        binding= FragmentAddShoeBinding.inflate(layoutInflater)
+        binding.viewModel=viewModel
+        viewModel.reset()
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        txt1 = view.findViewById(R.id.nameET)
-        txt2 = view.findViewById(R.id.sizeET)
-        txt3 = view.findViewById(R.id.CompanyET)
-        txt4 = view.findViewById(R.id.descrET)
-        button = view.findViewById(R.id.saveBTN)
-        cancel = view.findViewById(R.id.cancelBTN)
+
+        txt1 = binding.nameET
+        txt2 = binding.sizeET
+        txt3 = binding.CompanyET
+        txt4 = binding.descrET
+        button = binding.saveBTN
+        cancel = binding.cancelBTN
         button.setOnClickListener {
 
             //todo:send the 4 variables to RV ViewModel and save them as a new shoe
@@ -68,12 +77,12 @@ class Add_Shoe : Fragment() {
             val SizeChecker: Boolean = size.toFloatOrNull() != null
             if (NameChecker && SizeChecker && CompanyChecker && DescriptionChecker) {
 
-                viewModel.addShoe(name, size, company, descriptionn)
+                viewModel.addETshoe()
 
                 val action = Add_ShoeDirections.actionAddShoeToRVFragment()
                 view.findNavController().navigate(action)
             } else {
-                Toast.makeText(context, "Try again", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "fill all and make sure size is a number", Toast.LENGTH_SHORT).show()
             }
         }
         cancel.setOnClickListener {
